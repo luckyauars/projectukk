@@ -1,0 +1,111 @@
+
+body {
+  background-color: #252525;
+}
+
+.heading {
+  text-align: center;
+}
+
+.container {
+  border: solid 2px #8d8d8d;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: #fff;
+  max-width: 400px;
+  /*Sesuaikanukurancontainer*/margin: 0 auto;
+  /*Pusatkancontainerditengahhalaman*/;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.container .heading {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-weight: bolder;
+  color: #0034de; /* Sesuaikan warna heading */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form .btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: solid 1px #0034de;
+  background: linear-gradient(135deg, #0034de, #006eff);
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.form .btn:hover {
+  background: linear-gradient(135deg, #006eff, #0034de); /* Efek hover */
+}
+
+
+
+.input-field label {
+  position: absolute;
+  color: #8d8d8d;
+  pointer-events: none;
+  left: 0 auto;
+  transform: translateY(0.6rem);
+  transition: all 0.3s ease;
+}
+
+.input-field input {
+  padding: 10px 8px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: solid 1px #8d8d8d;
+  width: 100%;
+  transition: border-color 0.3s ease;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.input-field input:focus,
+.input-field input:valid {
+  border-color: #0034de; /* Warna border saat input aktif */
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  transform: translateY(-51%) translateX(-10px) scale(0.8);
+  background-color: #fff;
+  color: #0034de;
+  font-weight: bold;
+  border-radius: 100px;
+  padding: 0px 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.form .passicon {
+  cursor: pointer;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.form .close {
+  display: none;
+}
