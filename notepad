@@ -1,0 +1,18 @@
+<div class="gallery" id="main">
+                    <!-- Foto-foto galeri -->
+                    <?php
+                    if ($resultFoto && $resultFoto->num_rows > 0) {
+                        while ($row = $resultFoto->fetch_assoc()) {
+                            echo "<div class='photo-item col-lg-4 col-md-6 mb-4'>";
+                            echo "<img src='" . $row['LokasiFile'] . "' alt='Image' class='img-fluid'>";
+                            echo "<div class='image-info' id='imageInfo".$row['image']."'>";
+                            echo "<p class='mb-2'>" . $row['JudulFoto'] . "</p>";
+                            echo "<a href='#' class='btn btn-outline-white'>Lihat Selengkapnya</a>";
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                    } else {
+                        echo "Tidak ada data foto yang ditemukan";
+                    }
+                    ?>
+                </div>
