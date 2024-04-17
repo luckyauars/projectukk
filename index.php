@@ -73,6 +73,10 @@ $resultFoto = $conn->query($queryFoto);
             grid-template-columns: repeat(1, 1fr);
         }
     }
+
+    h2, p {
+        color:white ;
+    }
 </style>
 
 <body class="sb-nav-fixed">
@@ -133,6 +137,7 @@ $resultFoto = $conn->query($queryFoto);
                         <?php
                         while ($row = $resultFoto->fetch_assoc()) {
                             echo '<article>';
+                            echo '<a href="edit.php?id=' . $row['FotoID'] . '">';
                             echo '<img src="uploads' . $row['image'] . '" width="200px" height="200px">';
                             echo '<div class="konten">';
                             echo '<h2>' . $row['JudulFoto'] . '</h2>';
